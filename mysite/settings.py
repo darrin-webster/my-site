@@ -28,14 +28,28 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+# Also, note the INSTALLED_APPS setting at the top of the file. 
+# That holds the names of all Django applications that are activated 
+# in this Django instance. Apps can be used in multiple projects, 
+# and you can package and distribute them for use by others in their projects.
+
+
 # Application definition
 
 INSTALLED_APPS = [
+    # The polls appp
+    'polls.apps.PollsConfig',
+    # The admin site.
     'django.contrib.admin',
+    # An authentication system.
     'django.contrib.auth',
+    # A framework for content types
     'django.contrib.contenttypes',
+    # A session framework.
     'django.contrib.sessions',
+    # A messaging framework.
     'django.contrib.messages',
+    # A framework for managing static files.
     'django.contrib.staticfiles',
 ]
 
@@ -105,7 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'US/Pacific'
 
 USE_I18N = True
 
